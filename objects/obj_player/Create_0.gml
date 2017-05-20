@@ -1,7 +1,6 @@
-m_speed = 6;
+m_speed = 4;
 m_airSpeed = 3;
-m_jumpForce = 9;
-m_jumpDirection = 0;
+m_jumpForce = 12;
 m_gForce = 0.75;
 m_hangingUpSpeed = 4;
 m_canMoveInAir = false;

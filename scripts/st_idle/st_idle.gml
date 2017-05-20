@@ -1,7 +1,5 @@
 if (place_free(x, y+1))
-{
   state = st_air; // Se tiver pixel vago abaixo do personagem, é por que está no ar
-}
 
 if (place_meeting(x, y+1, obj_ice))
 {
@@ -20,8 +18,7 @@ if (wantMove)
 }
 else if (keyboard_check_pressed(key.jump) && !place_free(x,y+1))
 {
-  ySpeed = -m_jumpForce;  // Se a tecla de pulo for precionada, ele adiciona a força
-  m_jumpDirection = 0;    // de pula na velocidade, indica a direção do pulo, muda
-  state = st_air;         // o estado e encerra o script
+  jumpStart(-m_jumpForce, 0);  // Se a tecla de pulo for precionada, chama a função de pulo,
+  state = st_air;              // muda o estado e encerra o script
   exit;
 }
